@@ -3,6 +3,7 @@ Draw Multiple Links (Paths) Between Two Nodes in D3.js Force-Directed-Layout
 
 The original visualization of D3.js Force-Directed-Layout is suppose there is only one link between two nodes. 
 If we want to draw a graph with multiple links between nodes, we need a way to change the radius of [svg path(arc)](http://www.w3.org/TR/SVG/paths.html#PathDataEllipticalArcCommands) elements representing the link.
+
 Besides, it's better that the arc can increase its radius in a visually nice way. The subsequent path should gradually increase its radius to avoid overlapping and crossing.
 
 **[Try Yourself!](http://jsfiddle.net/zhanghuancs/a2QpA/)**
@@ -89,7 +90,7 @@ function setLinkIndexAndNum()
 }	
 ```
 
-Calculate Arc Path Radius 
+Calculate Different Arc Path Radius 
 ------------
 The radius of each arc path between two nodes should be gradually increase. 
 Use a simple formula `dr = dr/(1 + (1/lTotalLinkNum) * (d.linkindex - 1))` to set different but gradually increased radius to the link.
