@@ -53,6 +53,7 @@ function sortLinks()
 Set Total Number of Links and Link Index
 -----------------------------------------------------------------------------------------------------------
 After sorting the links, the links with the same source id and target id are put next to each other. 
+
 Then we need loop through the links and get the information of the total number of links between two nodes, and each link's link index.
 
 - `mLinkNum` is an object used to store the total number of links between each of two nodes. 
@@ -93,6 +94,7 @@ function setLinkIndexAndNum()
 Calculate Different Arc Path Radius 
 ------------
 The radius of each arc path between two nodes should be gradually increase. 
+
 Use a simple formula `dr = dr/(1 + (1/lTotalLinkNum) * (d.linkindex - 1))` to set different but gradually increased radius to the link.
 
 ```javascript
